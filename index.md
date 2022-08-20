@@ -18,9 +18,9 @@ This block of code is the user credential authentication. It rehashes the passwo
 ```
             
 \
-[Play Hangman](https://thejarman.epizy.com/Welcome.php)
+### [Play Hangman](https://thejarman.epizy.com/Welcome.php)
 \
-[Hangman Github](https://github.com/thejarman1/Hangman)
+### [Hangman Github](https://github.com/thejarman1/Hangman)
 ### Banking App
 ### Stock Investing Game
 ### Boggle
