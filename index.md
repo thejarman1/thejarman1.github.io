@@ -28,6 +28,51 @@ This project was an application for banking. A user if able to login and create 
 ![Deposit](Deposit.png)
 ![Withdraw](Withraw.png)
 ![Transactions](Transactions.png)
+.
+This code is used to make a withdraw and add the transaction to the history.
+```
+ public IActionResult Withdraw(AccountVM obj, int userId)
+        {
+            if (ModelState.IsValid)
+            {
+                int UserId = userId;
+
+                //Accounts account = _unitOfWork.Account.GetFirstOrDefault(u => u.UserId == UserId && u.AccountTypeId == obj.Account.AccountTypeId, includeProperties: "User,AccountType");
+                Accounts account = _db.Accounts.Where(u => u.UserId == UserId && u.AccountTypeId == obj.Account.AccountTypeId).FirstOrDefault();
+                account.Balance = account.Balance - obj.Account.Balance;
+
+
+                _unitOfWork.Account.Update(account);
+                _unitOfWork.Save();
+
+                Transactions newTransaction = new Transactions()
+                {
+                    AccountID = account.AccountId,
+                    AccountTypeId = account.AccountTypeId,
+                    UserId = account.UserId,
+                    TransactionType = "Withdraw",
+                    Balance = account.Balance,
+                    Amount = obj.Account.Balance,
+                    Date = DateTime.Now
+                };
+
+                _unitOfWork.Transaction.Add(newTransaction);
+                _unitOfWork.Save();
+
+                User user = _unitOfWork.Users.GetFirstOrDefault(u => u.userId == UserId);
+                TempData["success"] = "Balance Updated.";
+                return RedirectToAction("Bank", user);
+            }
+
+            obj.AccountTypeList = _unitOfWork.AccountType.GetAll().Select(i => new SelectListItem
+            {
+                Text = i.Name,
+                Value = i.AccountTypeId.ToString()
+            });
+
+            return View(obj);
+        }
+```
 
 ### [Banking App Github](https://github.com/rflowers45/TigerBanking/tree/dale-almostcomplete)
 ## Stock Investing Game
