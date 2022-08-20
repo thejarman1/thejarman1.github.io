@@ -92,7 +92,7 @@ int lastIndex = dailyPrices.Count() - 1; //This is used to get the total amount 
                 price = dayPrice; //Setting the global price to = the day price
                 string displayResults = ("Getting data for " + value + "<br> Date: " + dateString + "<br> Closing price: $" + dayPrice);
 		
-		private int GetRandomDate(int indicesCount)
+	private int GetRandomDate(int indicesCount)
         {
             var random = new Random();
             var range = indicesCount - 60;
@@ -106,6 +106,7 @@ int lastIndex = dailyPrices.Count() - 1; //This is used to get the total amount 
 ### [Stock Investing Game Github](https://github.com/rflowers45/StockInvestingGame)
 
 ## Boggle
+This game was made using blazor. We had never used blazor before, so it was helpful and challenging to use. It worked really well for what we had to do. It did take some time to learn how to use it properly though. This game starts out on the home screen where a user joins a game. They either start or join a game. If they start a game, they are given a code that the other person uses to join the game. Once both users are in the lobby and click start the game begins. The users are given 30 seconds to find as many words as they can. They select letters and double click on the last letter to submit the word. Once the game ends, the winner is determined and the scores and words are displayed for each user. My part of this assignment was the front end development. I worked on the look and design of our assignment. I also implemented the functionality for the board.
 ![Boggle Home](BoggleHome.png)
 ![Join](Join.png)
 ![Lobby](Lobby.png)
