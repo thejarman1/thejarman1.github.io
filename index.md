@@ -84,4 +84,5 @@ This code is used to make a withdraw and add the transaction to the history.
 
 ## Boggle
 
-### [Play the Boggle Game](https://github.com/timw5/Boggle)
+### [Boggle Game Github](https://github.com/timw5/Boggle)
+### [Play the Game!](https://sliceofbread.azurewebsites.net/)
