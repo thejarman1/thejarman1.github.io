@@ -76,4 +76,7 @@ This code is used to make a withdraw and add the transaction to the history.
 
 ### [Banking App Github](https://github.com/rflowers45/TigerBanking/tree/dale-almostcomplete)
 ## Stock Investing Game
+
+### [Stock Investing Game Github](https://github.com/rflowers45/StockInvestingGame)
+
 ## Boggle
