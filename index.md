@@ -28,7 +28,7 @@ This project was an application for banking. A user if able to login and create 
 ![Deposit](Deposit.png)
 ![Withdraw](Withraw.png)
 ![Transactions](Transactions.png)
-.
+
 This code is used to make a withdraw and add the transaction to the history.
 ```
  public IActionResult Withdraw(AccountVM obj, int userId)
@@ -80,3 +80,5 @@ This code is used to make a withdraw and add the transaction to the history.
 ### [Stock Investing Game Github](https://github.com/rflowers45/StockInvestingGame)
 
 ## Boggle
+
+### [Play the Boggle Game](https://github.com/timw5/Boggle)
